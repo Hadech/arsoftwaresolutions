@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&R Software Solutions | Desarrollo de Software y Consultoría</title>
+  <meta name="description" content="A&R Software Solutions: Soluciones tecnológicas innovadoras en desarrollo de software, consultoría y automatización de procesos para empresas.">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --secondary: #0d2235;
+      --accent: #fbbc05;
+      --bg: #f7f9fa;
+      --text: #222;
+      --white: #fff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 2rem 0 1.5rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cfd8dc;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem 2rem 1rem;
+      background: var(--white);
+    }
+    .hero img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px rgba(26,115,232,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.7rem;
+    }
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .cta-btn {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(26,115,232,0.08);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-btn:hover {
+      background: var(--accent);
+      color: var(--secondary);
+    }
+    .section {
+      padding: 2.5rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(13,34,53,0.07);
+      padding: 1.5rem 1.2rem;
+      flex: 1 1 260px;
+      max-width: 320px;
+      min-width: 220px;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(26,115,232,0.10);
+    }
+    .service-card h3 {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      margin-bottom: 0.7rem;
+    }
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .testimonial {
+      background: var(--white);
+      border-left: 5px solid var(--primary);
+      border-radius: 0.7rem;
+      box-shadow: 0 2px 12px rgba(13,34,53,0.07);
+      padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+      max-width: 350px;
+      min-width: 220px;
+      font-size: 1rem;
+      color: #333;
+      position: relative;
+    }
+    .testimonial:before {
+      content: "“";
+      font-size: 2.5rem;
+      color: var(--accent);
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+    .testimonial .author {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    footer {
+      background: var(--secondary);
+      color: #cfd8dc;
+      text-align: center;
+      padding: 1.2rem 0;
+      font-size: 0.95rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .services, .testimonials {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .hero h2 { font-size: 1.3rem; }
+      .section-title { font-size: 1.2rem; }
+      .service-card, .testimonial { max-width: 100%; }
+      .hero img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A&R Software Solutions</h1>
+    <p>Innovación y tecnología para el crecimiento de tu empresa</p>
+  </header>
+
+  <section class="hero">
+    <img src="https://placehold.co/420x260/1a73e8/fff?text=Tu+Solución+Digital" alt="Soluciones tecnológicas A&R">
+    <h2>Desarrollo de Software y Consultoría Tecnológica</h2>
+    <p>
+      En A&R Software Solutions ayudamos a empresas a transformar sus procesos con soluciones digitales a la medida, seguras y escalables. Nuestro equipo combina experiencia, innovación y compromiso para impulsar tu negocio al siguiente nivel.
+    </p>
+    <a href="#contacto" class="cta-btn">Solicita una asesoría</a>
+  </section>
+
+  <section class="section" id="servicios">
+    <h2 class="section-title">Nuestros Servicios Destacados</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Desarrollo de Software a Medida</h3>
+        <p>Aplicaciones web y móviles personalizadas, adaptadas a las necesidades de tu empresa.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consultoría y Automatización</h3>
+        <p>Diagnóstico, optimización y automatización de procesos para mejorar la eficiencia operativa.</p>
+      </div>
+      <div class="service-card">
+        <h3>Integración de Sistemas</h3>
+        <p>Conectamos tus plataformas y servicios para lograr una gestión centralizada y eficiente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonios">
+    <h2 class="section-title">Testimonios de Clientes</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “El equipo de A&R entendió nuestras necesidades y entregó una solución robusta y fácil de usar. ¡Altamente recomendados!”
+        <span class="author">— Laura G., Gerente de Operaciones</span>
+      </div>
+      <div class="testimonial">
+        “Gracias a su consultoría, optimizamos procesos clave y mejoramos la productividad de nuestro equipo.”
+        <span class="author">— Andrés M., Director de Tecnología</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2 class="section-title">¿Listo para transformar tu empresa?</h2>
+    <p style="text-align:center; margin-bottom:1.5rem;">
+      Contáctanos para una asesoría gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
+    </p>
+    <div style="display:flex; justify-content:center;">
+      <a href="mailto:contacto@arsoftwaresolutions.com" class="cta-btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 A&R Software Solutions. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
